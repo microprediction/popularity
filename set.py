@@ -25,7 +25,7 @@ if __name__ == '__main__':
         if data is not None:
             for category in CATEGORIES:
               current_value = int(data[category])
-              level_name = category + '_' + repo_name + '.json'   
+              level_name = 'github_' + category + '_' + repo_name + '.json'   
               print( mw.set(name=level_name,value=current_value) ) 
         else:
             print('Something is wrong')
