@@ -26,16 +26,8 @@ if __name__ == '__main__':
             for category in CATEGORIES:
               current_value = int(data[category])
               level_name = category + '_' + repo_name + '.json'   
-              previous_value = mw.get_current_value(name=level_name)
-              if previous_value is None:
-                  print('No previous value for '+level_name)
-                  print( mw.set(name=level_name,value=current_value) )
-              else:
-                  if int(float(previous_value)) != int(float(current_value)):  
-                      print( mw.set(name=level_name,value=current_value) ) 
-                      print( level_name+' updated to '+str(current_value) )
-                  else:
-                      print( (level_name, current_value, ' is unchanged') )
+              print( mw.set(name=level_name,value=current_value) ) 
         else:
+            print('Something is wrong')
             print(url)
            
