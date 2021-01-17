@@ -7,7 +7,7 @@ write_key = os.environ.get(
 mw = MicroWriter(write_key=write_key)
 assert mw.key_difficulty(mw.write_key) >= 12, "You need a key of difficulty 12 to create a stream"
 
-CATEGORIES = ['watchers_count', 'stargazers_count', 'forks_count']
+CATEGORIES = ['stargazers_count', 'forks_count']
 REPOS = {'pykalman': 'https://github.com/pykalman/pykalman',
          'microprediction': 'https://github.com/microprediction/microprediction',
          'prophet': 'https://github.com/facebook/prophet',
